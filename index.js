@@ -42,7 +42,7 @@ function createTimeOutEvent(employee, dateStamp) {
 
 function hoursWorkedOnDate(employee, date) {
   return (employee.timeOutEvents.find(event => event.date === date).hour
-    - employee.timeInEvents.find(event => event.date === date).hour)/100
+            - employee.timeInEvents.find(event => event.date === date).hour)/100
 }
 
 function wagesEarnedOnDate(employee, date) {
@@ -61,14 +61,4 @@ function findEmployeeByFirstName(employees, firstName) {
 function calculatePayroll(employees) {
   return employees.reduce((total, employee) => total + allWagesFor(employee), 0)
 }
-
- cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27])
-        // Earns 324
-        updatedBpRecord = createTimeInEvent(cRecord, "0044-03-14 0900")
-        updatedBpRecord = createTimeOutEvent(cRecord, "0044-03-14 2100")
-        // Earns 54
-        updatedBpRecord = createTimeInEvent(cRecord, "0044-03-15 0900")
-        updatedBpRecord = createTimeOutEvent(cRecord, "0044-03-15 1100")
-        
-        allWagesFor(cRecord)
 
