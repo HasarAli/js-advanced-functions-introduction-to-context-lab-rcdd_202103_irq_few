@@ -42,7 +42,8 @@ function createTimeOutEvent(employee, dateStamp) {
 
 function hoursWorkedOnDate(employee, date) {
   return (employee.timeOutEvents.find(event => event.date === date).hour
-            - employee.timeInEvents.find(event => event.date === date).hour)/100
+            - employee.timeInEvents.find(event => event.date === date).hour)
+            /100
 }
 
 function wagesEarnedOnDate(employee, date) {
